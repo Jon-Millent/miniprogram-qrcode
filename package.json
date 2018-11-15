@@ -1,0 +1,19 @@
+{
+  "name": "miniprogram-qrcode",
+  "version": "1.0.0",
+  "description": "生成小程序码辅助工具。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jon-Millent/miniprogram-qrcode.git"
+  },
+  "author": "jon-millent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jon-Millent/miniprogram-qrcode/issues"
+  },
+  "homepage": "https://github.com/Jon-Millent/miniprogram-qrcode#readme"
+}
