@@ -12,10 +12,6 @@ npm install miniprogram-qrcode --save
 
 ## 使用
 
-
-### miniQrcode
-miniQrcode是用来生成二维码的，使用实例：
-
 ```js
 let miniprogramQrcode = require('miniprogram-qrcode')
 
@@ -23,12 +19,5 @@ let qrocode = new miniprogramQrcode.miniQrcode({
   appId: 'your appid',
   appSecret: 'your appSecret'
 });
-
-let info = await qrocode.getWxQrcodeInfo({
-  mode: 'createWXAQRCode',
-  config: {
-    path: 'pages/index/main'
-  },
-})
 
 ```
