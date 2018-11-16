@@ -40,7 +40,7 @@ let qrocode = new miniprogramQrcode.miniQrcode({
 
 ```
 
-#### miniQrcode.getWxQrcodeInfo
+### miniQrcode.getWxQrcodeInfo
 二维码渲染函数，一共有三种生成模式。
 
 * createWXAQRCode
@@ -126,7 +126,7 @@ let mySharp = new miniprogramQrcode.miniSharp(path.join(__dirname, '../template.
 
 ![template.png](https://i.loli.net/2018/11/16/5bee70edc46da.png)
 
-#### miniSharp.renderImage
+### miniSharp.renderImage
 
 ```js
 let renderBuffer = await mySharp.renderImage(info.image, // 二维码图片的 buffer 数组 
