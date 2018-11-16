@@ -78,7 +78,7 @@ let info = await qrocode.getWxQrcodeInfo({
 ```
 
 这三种模式的返回值格式
-```json
+```js
 {
   code: 200, // 200： 成功，500：失败
   error: null, // 当出错的时候的错误信息
