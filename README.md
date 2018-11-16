@@ -108,5 +108,26 @@ let info = await qrocode.getWxQrcodeInfo({
 
 
 
+### `Class` miniSharp
+把二维码或者小程序码加工拼在指定的模板图片上。
 
+```js
+const path = require('path')
+const path = require('miniprogram-qrcode')
+
+let mySharp = new miniprogramQrcode.miniSharp(path.join(__dirname, '../template.png')); // 传入指定的模板图片 如下图。
+
+```
+
+![template.png](https://i.loli.net/2018/11/16/5bee70edc46da.png)
+
+#### miniSharp.renderImage
+
+```js
+let renderBuffer = await mySharp.renderImage(info.image, {
+  width: 200, // 重新设置二维码宽度
+  left: 54, // x轴偏移
+  top: 217 // y轴偏移
+})
+```
 
