@@ -43,8 +43,24 @@ let qrocode = new miniprogramQrcode.miniQrcode({
 * getWXACodeUnlimit
 
 #### `createWXAQRCode`
-> 获取小程序二维码，适用于需要的码数量较少的业务场景。通过该接口生成的小程序码，永久有效，有数量限制，详见获取二维码。
+> 获取`小程序二维码`，适用于需要的码数量较少的业务场景。通过该接口生成的小程序码，永久有效，有数量限制。
 > <a href="https://developers.weixin.qq.com/miniprogram/dev/api/open-api/qr-code/createWXAQRCode.html">官方说明</a>
+
+```js
+
+let info = await qrocode.getWxQrcodeInfo({
+  mode: 'createWXAQRCode',
+  config: {
+    path: 'pages/index/main', // String 扫码进入的小程序页面路径，最大长度 128 字节，不能为空
+    width: 400, // Number 二维码的宽度，默认 430px，最小 280px，最大 1280px
+  },
+})
+
+```
+
+#### `getWXACode`
+> 获取`小程序码`，适用于需要的码数量较少的业务场景。通过该接口生成的小程序码，永久有效，有数量限制。
+> <a href="https://developers.weixin.qq.com/miniprogram/dev/api/open-api/qr-code/getWXACode.html">官方说明</a>
 
 ```js
 
