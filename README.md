@@ -130,6 +130,8 @@ let renderBuffer = await mySharp.renderImage(info.image, // 二维码图片的 b
   left: 54, // x轴偏移
   top: 217 // y轴偏移
 })
+
+// 返回渲染好的buffer数组
 ```
 
 `渲染效果`
