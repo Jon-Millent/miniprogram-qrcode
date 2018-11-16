@@ -124,10 +124,14 @@ let mySharp = new miniprogramQrcode.miniSharp(path.join(__dirname, '../template.
 #### miniSharp.renderImage
 
 ```js
-let renderBuffer = await mySharp.renderImage(info.image, {
+let renderBuffer = await mySharp.renderImage(info.image, // 二维码图片的 buffer 数组 
+{ 
   width: 200, // 重新设置二维码宽度
   left: 54, // x轴偏移
   top: 217 // y轴偏移
 })
 ```
 
+`渲染效果`
+
+![output.png](https://i.loli.net/2018/11/16/5bee716374ba7.png)
