@@ -9,8 +9,7 @@
 * 轻松写几行代码即可批量生成二维码
 * 自动缓存`access_token`，过期后自动重新生成
 
-> 正常情况下，批量生成`100`张需要`62.556秒`，平均每张需要`0.62556秒`，1万张大概需要 `1.73小时`。
-> <a href="https://github.com/Jon-Millent/miniprogram-qrcode/blob/master/test/render.js">批量示例代码</a>
+> 正常情况下，批量生成`100`张需要`62.556秒`，平均每张需要`0.62556秒`，1万张大概需要 `1.73小时`。  <a href="https://github.com/Jon-Millent/miniprogram-qrcode/blob/master/test/render.js">批量示例代码</a>
 
 ## 安装
 
