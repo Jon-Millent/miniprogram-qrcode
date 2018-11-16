@@ -23,7 +23,7 @@ let qrocode = new miniprogramQrcode.miniQrcode({
 ```
 
 ## Api List
-* <a href="#class-miniqrcode">miniqrcode</a>
+* <a href="#class-miniqrcode">miniQrcode</a>
   * <a href="#miniqrcodegetwxqrcodeinfo">getWxQrcodeInfo</a>
 * <a href="#class-minisharp">miniSharp</a>
   * <a href="#minisharprenderimage">renderImage</a>
