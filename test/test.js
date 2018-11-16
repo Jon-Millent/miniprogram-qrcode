@@ -13,7 +13,7 @@ let mySharp = new miniprogramQrcode.miniSharp(path.join(__dirname, '../template.
 (async function () {
 
   let info = await qrocode.getWxQrcodeInfo({
-    mode: 'getWXACode',
+    mode: 'createWXAQRCode',
     config: {
       path: 'pages/index/main'
     },
@@ -21,8 +21,8 @@ let mySharp = new miniprogramQrcode.miniSharp(path.join(__dirname, '../template.
 
   let renderBuffer = await mySharp.renderImage(info.image, {
     width: 200,
-    left: 54,
-    top: 217
+    left: 362,
+    top: 53
   })
 
   fs.writeFileSync(path.join(__dirname, '../output/output.png'), renderBuffer, 'utf8');
