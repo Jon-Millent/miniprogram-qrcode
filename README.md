@@ -39,27 +39,28 @@ let qrocode = new miniprogramQrcode.miniQrcode({
 二维码渲染函数，一共有三种生成模式。
 
 ##### createWXAQRCode
-获取小程序二维码，适用于需要的码数量较少的业务场景。通过该接口生成的小程序码，永久有效，有数量限制，详见获取二维码。
+> 获取小程序二维码，适用于需要的码数量较少的业务场景。通过该接口生成的小程序码，永久有效，有数量限制，详见获取二维码。
+> <a href="https://developers.weixin.qq.com/miniprogram/dev/api/open-api/qr-code/createWXAQRCode.html">官方说明</a>
 
 ```js
 
-  let info = await qrocode.getWxQrcodeInfo({
-    mode: 'createWXAQRCode',
-    config: {
-      path: 'pages/index/main', // String 扫码进入的小程序页面路径，最大长度 128 字节，不能为空
-      width: 400, // Number 二维码的宽度，默认 430px，最小 280px，最大 1280px
-    },
-  })
+let info = await qrocode.getWxQrcodeInfo({
+  mode: 'createWXAQRCode',
+  config: {
+    path: 'pages/index/main', // String 扫码进入的小程序页面路径，最大长度 128 字节，不能为空
+    width: 400, // Number 二维码的宽度，默认 430px，最小 280px，最大 1280px
+  },
+})
 
 ```
 
 这三种模式的返回值格式
 ```
-  {
-    code: 200, // 200： 成功，500：失败
-    error: null, // 当出错的时候的错误信息
-    image: [BufferArray] // 二维码buffer数组
-  }
+{
+  code: 200, // 200： 成功，500：失败
+  error: null, // 当出错的时候的错误信息
+  image: [BufferArray] // 二维码buffer数组
+}
 ```
 
 
