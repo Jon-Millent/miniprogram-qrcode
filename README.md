@@ -185,7 +185,34 @@ let info = await qrocode.getWxQrcodeInfo({
   },
 })
 ```
+
 ![output-getWXACodeUnlimit.png](https://i.loli.net/2018/11/17/5bef85b9ac1b9.png)
+
+
+解析示例
+```js
+onLoad (query) {
+  // scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene
+  this.scene = decodeURIComponent(query.scene)
+  this.queryJson = JSON.stringify(query)
+
+  // 尝试解析  scene 格式: shop:1-id:2
+
+  try {
+    let oneArr = this.scene.split('-')
+    let twoJson = {}
+    for(let i=0; i<oneArr.length; i++) {
+      let target = oneArr[i].split(':')
+      twoJson[target[0]] = target[1]
+    }
+    this.twoJson = JSON.stringify(twoJson)
+
+  } catch(e) {
+    this.twoJson = e
+  }
+
+},
+```
 
 在开发者工具中例如下面模拟
 ![QQ截图20181117104623.png](https://i.loli.net/2018/11/17/5bef811c0a918.png)
