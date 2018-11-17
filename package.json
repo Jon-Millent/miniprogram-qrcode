@@ -1,6 +1,6 @@
 {
   "name": "miniprogram-qrcode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "生成小程序码辅助工具。",
   "main": "core/index.js",
   "scripts": {
