@@ -17,6 +17,25 @@
 npm install miniprogram-qrcode --save
 ```
 
+> 在 centos 下安装的时候会可能会报`libvips`相关的错误，因为`sharp`库依赖于`libvips`，首先安装`libvips`
+```
+wget https://github.com/libvips/libvips/releases/download/v8.7.1/vips-8.7.1.tar.gz
+tar xf vips-8.7.1.tar.gz
+cd vips-8.7.1
+./configure
+make
+sudo make install
+sudo ldconfig
+```
+
+然后
+
+```
+npm install miniprogram-qrcode --save
+```
+
+
+
 ## 使用
 
 ```js
