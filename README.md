@@ -1,6 +1,8 @@
 # miniprogram-qrcode
+<p align="center">
+  <img src="https://i.loli.net/2018/11/16/5beeba0e1bb08.png" width="400px" alt="未标题-2.png" title="未标题-2.png" />
+</p>
 
-<img src="https://i.loli.net/2018/11/16/5beeba0e1bb08.png" width="400px" alt="未标题-2.png" title="未标题-2.png" />
 
 <p align="center">
   
