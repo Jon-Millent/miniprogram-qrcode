@@ -149,3 +149,44 @@ let renderBuffer = await mySharp.renderImage(info.image, // 二维码图片的 b
 `渲染效果`
 
 ![output.png](https://i.loli.net/2018/11/16/5bee716374ba7.png)
+
+## 关于调试
+
+### 微信开发者工具
+使用微信开发者工具可以进行模拟参数调试
+![QQ截图20181117104623.png](https://i.loli.net/2018/11/17/5bef811c0a918.png)
+
+### 参数模式
+
+#### createWXAQRCode & getWXACode
+这两种生成的参数，生成二维码数量有限，参数直接跟在path路径后面，例如：
+```js
+let info = await qrocode.getWxQrcodeInfo({
+  mode: 'createWXAQRCode',
+  config: {
+    page: `pages/index/main?sgr=521314&i=loveyou`
+  },
+})
+```
+扫一扫查看结果，注：这是线上版本(我留了一个彩蛋)可以用来模拟调试，长按`红色圈出区域两次`即可调出控制套模拟  
+
+![output-createWXAQRCode.png](https://i.loli.net/2018/11/17/5bef82c0a2625.png)  
+
+![Screenshot_2018-11-17-10-55-13-286_com.tencent.mm.png](https://i.loli.net/2018/11/17/5bef84594b377.png)
+
+#### getWXACodeUnlimit
+这个可以生成无限个，但是只能携带有局限性的参数`scene`，在这里推荐一种解析方式 `key:value-key:value`
+```js
+let info = await qrocode.getWxQrcodeInfo({
+  mode: 'getWXACodeUnlimit',
+  config: {
+    page: `pages/index/main`,
+    scene: 'i:loveyou-sgr:521314'
+  },
+})
+```
+![output-getWXACodeUnlimit.png](https://i.loli.net/2018/11/17/5bef85b9ac1b9.png)
+
+在开发者工具中例如下面模拟
+![QQ截图20181117104623.png](https://i.loli.net/2018/11/17/5bef811c0a918.png)
+
