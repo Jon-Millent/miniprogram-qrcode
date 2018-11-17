@@ -1,4 +1,4 @@
-# miniprogram-qrcode
+
 <p align="center">
   <img src="https://i.loli.net/2018/11/16/5beeba0e1bb08.png" width="400px" alt="未标题-2.png" title="未标题-2.png" />
 </p>
@@ -21,6 +21,9 @@
   
 </p>
 
+<h1 align="center">
+miniprogram-qrcode
+</h1>
 
 碉堡了的小程序码生成插件。
 
