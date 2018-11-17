@@ -2,6 +2,24 @@
 
 <img src="https://i.loli.net/2018/11/16/5beeba0e1bb08.png" width="400px" alt="未标题-2.png" title="未标题-2.png" />
 
+<p align="center">
+  
+  <a>
+    <img src="https://img.shields.io/npm/dt/miniprogram-qrcode.svg">
+  </a>
+  <a>
+    <img src="https://img.shields.io/github/package-json/v/jon-millent/miniprogram-qrcode.svg">
+  </a>
+  <a>
+    <img src="https://badges.frapsoft.com/os/mit/mit.svg?v=103">
+  </a>
+  <a>
+    <img src="https://badges.frapsoft.com/os/v3/open-source.svg?v=103">
+  </a>
+  
+</p>
+
+
 碉堡了的小程序码生成插件。
 
 * 支持三种小程序码获取方式
