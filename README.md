@@ -194,11 +194,28 @@ let renderBuffer = await mySharp.renderImage(info.image, // 二维码图片的 b
 
 ## 关于调试
 
-### 微信开发者工具
+## 微信开发者工具
 使用微信开发者工具可以进行模拟参数调试
 ![QQ截图20181117104623.png](https://i.loli.net/2018/11/17/5bef811c0a918.png)
 
-### 参数模式
+
+## 测试接口
+
+这里我提供了一个测试接口，可以带参数生成线上的小程序码，用来调试
+
+`[get]` `http://wx.toolos.cc`
+参数
+
+* `mode` 必传 [createWXAQRCode | getWXACode | getWXACodeUnlimit] 之一  
+
+其他参数对应上面的文档的`mode`对应的参数，`path` 或者 `page` 需要 `encodeURIComponent` 一下
+示例  
+
+```
+http://wx.toolos.cc/?mode=createWXAQRCode&path=pages%2Findex%2Fmain
+```
+
+## 参数模式
 
 #### createWXAQRCode & getWXACode
 这两种生成的参数，生成二维码数量有限，参数直接跟在path路径后面，例如：
