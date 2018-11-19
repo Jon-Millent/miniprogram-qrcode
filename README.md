@@ -206,9 +206,14 @@ let renderBuffer = await mySharp.renderImage(info.image, // 二维码图片的 b
 `[get]` `http://wx.toolos.cc`
 参数
 
-* `mode` 必传 [createWXAQRCode | getWXACode | getWXACodeUnlimit] 之一  
+* `mode` 必传 [createWXAQRCode | getWXACode | getWXACodeUnlimit] 之一    
 
-其他参数对应上面的文档的`mode`对应的参数，`path` 或者 `page` 需要 `encodeURIComponent` 一下
+注意  
+
+* 其他参数对应上面的文档的`mode`对应的参数，`path` 或者 `page` 需要 `encodeURIComponent` 一下  
+* 目前小程序只有一个路径 `pages/index/main`    
+* 线上服务器配置低
+
 示例  
 
 ```
