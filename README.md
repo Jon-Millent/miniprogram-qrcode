@@ -39,8 +39,14 @@ miniprogram-qrcode
 ```
 npm install miniprogram-qrcode --save
 ```
+#### windows
+windows依赖于`libvips`，由于安装时候下载该库较慢，请参考下面方法安装
+* 进入 `npm-cache` 目录，一般`npm-cache`位于 (输入 `npm root -g`) 的同级目录
+* 下载 https://share.weiyun.com/5ZIyyAH 复制到 `/npm-cache/_libvips/` 下
+* `npm install miniprogram-qrcode --save`
 
-> 在 centos 下安装的时候会可能会报`libvips`相关的错误，因为`sharp`库依赖于`libvips`，首先安装`libvips`
+#### linux
+> 在 linux 下安装的时候会可能会报`libvips`相关的错误，因为`sharp`库依赖于`libvips`，首先安装`libvips`
 ```
 wget https://github.com/libvips/libvips/releases/download/v8.7.1/vips-8.7.1.tar.gz
 tar xf vips-8.7.1.tar.gz
