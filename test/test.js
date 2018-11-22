@@ -2,6 +2,7 @@ const path = require('path')
 
 let miniQrcode = require('../core/index')
 const fs = require('fs')
+const path = require('path')
 
 let qrocode = new miniQrcode({
   appId: '',
