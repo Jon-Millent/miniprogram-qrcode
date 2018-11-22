@@ -28,9 +28,9 @@ miniprogram-qrcode
 碉堡了的小程序码生成插件。
 
 * 支持三种小程序码获取方式
-* 支持将小程序码合成到指定模板图片上
-* 轻松写几行代码即可批量生成二维码
 * 自动缓存`access_token`，过期后自动重新生成
+
+* 将小程序码合成到指定模板图片上功能已经迁移到 <a href="https://github.com/Jon-Millent/miniprogram-qrcode-image">miniprogram-qrcode-image</a>
 
 > 正常情况下，批量生成`100`张需要`62.556秒`，平均每张需要`0.62556秒`，1万张大概需要 `1.73小时`。  <a href="https://github.com/Jon-Millent/miniprogram-qrcode/blob/master/test/render.js">批量示例代码</a>
 
@@ -39,30 +39,6 @@ miniprogram-qrcode
 ```
 npm install miniprogram-qrcode --save
 ```
-#### windows
-windows依赖于`libvips`，由于安装时候下载该库较慢，请参考下面方法安装
-* 进入 `npm-cache` 目录，一般`npm-cache`位于 (输入 `npm root -g`) 的同级目录
-* 下载 https://share.weiyun.com/5ZIyyAH 复制到 `/npm-cache/_libvips/` 下
-* `npm install miniprogram-qrcode --save`
-
-#### linux
-> 在 linux 下安装的时候会可能会报`libvips`相关的错误，因为`sharp`库依赖于`libvips`，首先安装`libvips`
-```
-wget https://github.com/libvips/libvips/releases/download/v8.7.1/vips-8.7.1.tar.gz
-tar xf vips-8.7.1.tar.gz
-cd vips-8.7.1
-./configure
-make
-sudo make install
-sudo ldconfig
-```
-
-然后
-
-```
-npm install miniprogram-qrcode --save
-```
-
 
 
 ## 使用
@@ -70,7 +46,7 @@ npm install miniprogram-qrcode --save
 ```js
 let miniprogramQrcode = require('miniprogram-qrcode')
 
-let qrocode = new miniprogramQrcode.miniQrcode({
+let qrocode = new miniprogramQrcode({
   appId: 'your appid',
   appSecret: 'your appSecret'
 });
@@ -78,24 +54,11 @@ let qrocode = new miniprogramQrcode.miniQrcode({
 ```
 
 ## Api List
-* <a href="#class-miniqrcode">miniQrcode</a>
+* miniprogramQrcode
   * <a href="#miniqrcodegetwxqrcodeinfo">getWxQrcodeInfo</a>
-* <a href="#class-minisharp">miniSharp</a>
-  * <a href="#minisharprenderimage">renderImage</a>
-### `Class` miniQrcode
-生成小程序二维码类
+  
+### getWxQrcodeInfo
 
-```js
-let miniprogramQrcode = require('miniprogram-qrcode')
-
-let qrocode = new miniprogramQrcode.miniQrcode({
-  appId: 'your appid', // 必传
-  appSecret: 'your appSecret' // 必传
-});
-
-```
-
-### miniQrcode.getWxQrcodeInfo
 二维码渲染函数，一共有三种生成模式。
 
 * createWXAQRCode
@@ -167,36 +130,6 @@ let info = await qrocode.getWxQrcodeInfo({
 ```
 
 
-
-### `Class` miniSharp
-把二维码或者小程序码加工拼在指定的模板图片上。
-
-```js
-const path = require('path')
-const path = require('miniprogram-qrcode')
-
-let mySharp = new miniprogramQrcode.miniSharp(path.join(__dirname, '../template.png')); // 传入指定的模板图片 如下图。
-
-```
-
-![template.png](https://i.loli.net/2018/11/16/5bee70edc46da.png)
-
-### miniSharp.renderImage
-
-```js
-let renderBuffer = await mySharp.renderImage(info.image, // 二维码图片的 buffer 数组 
-{ 
-  width: 200, // 重新设置二维码宽度
-  left: 54, // x轴偏移
-  top: 217 // y轴偏移
-})
-
-// 返回渲染好的buffer数组
-```
-
-`渲染效果`
-
-![output.png](https://i.loli.net/2018/11/16/5bee716374ba7.png)
 
 ## 关于调试
 

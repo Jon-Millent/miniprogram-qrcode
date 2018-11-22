@@ -1,4 +1,1 @@
-module.exports = {
-  miniQrcode: require('./miniQrcode'),
-  miniSharp: require('./miniSharp')
-}
+module.exports = require('./miniQrcode')

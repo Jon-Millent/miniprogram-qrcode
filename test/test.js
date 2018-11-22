@@ -1,14 +1,13 @@
 const path = require('path')
 
-let miniprogramQrcode = require('../core/index')
+let miniQrcode = require('../core/index')
 const fs = require('fs')
 
-let qrocode = new miniprogramQrcode.miniQrcode({
-  appId: '',
-  appSecret: ''
+let qrocode = new miniQrcode({
+  appId: 'wxbd0737aaa75b002a',
+  appSecret: 'e2b7d2588af69387e1377bf58d4d1ff3'
 });
 
-let mySharp = new miniprogramQrcode.miniSharp(path.join(__dirname, '../template.png'));
 
 (async function () {
 
@@ -19,12 +18,6 @@ let mySharp = new miniprogramQrcode.miniSharp(path.join(__dirname, '../template.
     },
   })
 
-  let renderBuffer = await mySharp.renderImage(info.image, {
-    width: 200,
-    left: 362,
-    top: 53
-  })
-
-  fs.writeFileSync(path.join(__dirname, '../output/output.png'), renderBuffer, 'utf8');
+  fs.writeFileSync(path.join(__dirname, '../output/output.png'), info.image, 'utf8');
 
 })();

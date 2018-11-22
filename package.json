@@ -1,6 +1,6 @@
 {
   "name": "miniprogram-qrcode",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "生成小程序码辅助工具。",
   "main": "core/index.js",
   "scripts": {
@@ -18,7 +18,6 @@
   "homepage": "https://github.com/Jon-Millent/miniprogram-qrcode#readme",
   "dependencies": {
     "anger-wechat": "^1.0.2",
-    "request": "^2.88.0",
-    "sharp": "^0.21.0"
+    "request": "^2.88.0"
   }
 }
