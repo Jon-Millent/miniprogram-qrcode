@@ -137,28 +137,6 @@ let info = await qrocode.getWxQrcodeInfo({
 使用微信开发者工具可以进行模拟参数调试
 ![QQ截图20181117104623.png](https://i.loli.net/2018/11/17/5bef811c0a918.png)
 
-
-## 测试接口
-
-这里我提供了一个测试接口，可以带参数生成线上的小程序码，用来调试
-
-`[get]` `http://wx.toolos.cc`
-参数
-
-* `mode` 必传 [createWXAQRCode | getWXACode | getWXACodeUnlimit] 之一    
-
-注意  
-
-* 其他参数对应上面的文档的`mode`对应的参数，`path` 或者 `page` 需要 `encodeURIComponent` 一下  
-* 目前小程序只有一个路径 `pages/index/main`    
-* 线上服务器配置低
-
-示例  
-
-```
-http://wx.toolos.cc/?mode=createWXAQRCode&path=pages%2Findex%2Fmain
-```
-
 ## 参数模式
 
 #### createWXAQRCode & getWXACode
