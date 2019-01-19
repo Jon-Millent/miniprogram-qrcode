@@ -91,6 +91,9 @@ miniprogramQrcode.getWxQrcodeInfo(`[@config: Object]`)
 > <a href="https://developers.weixin.qq.com/miniprogram/dev/api/open-api/qr-code/createWXAQRCode.html">官方说明</a>
 
 ```js
+let miniprogramQrcode = require('miniprogram-qrcode')
+let qrocode = new miniprogramQrcode({...})
+
 let info = await qrocode.getWxQrcodeInfo({
   mode: 'createWXAQRCode',
   config: {
@@ -105,6 +108,8 @@ let info = await qrocode.getWxQrcodeInfo({
 > <a href="https://developers.weixin.qq.com/miniprogram/dev/api/open-api/qr-code/getWXACode.html">官方说明</a>
 
 ```js
+let miniprogramQrcode = require('miniprogram-qrcode')
+let qrocode = new miniprogramQrcode({...})
 
 let info = await qrocode.getWxQrcodeInfo({
   mode: 'getWXACode',
@@ -124,6 +129,8 @@ let info = await qrocode.getWxQrcodeInfo({
 > <a href="https://developers.weixin.qq.com/miniprogram/dev/api/open-api/qr-code/getWXACodeUnlimit.html">官方说明</a>
 
 ```js
+let miniprogramQrcode = require('miniprogram-qrcode')
+let qrocode = new miniprogramQrcode({...})
 
 let info = await qrocode.getWxQrcodeInfo({
   mode: 'getWXACodeUnlimit',
