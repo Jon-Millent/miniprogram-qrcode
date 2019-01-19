@@ -86,7 +86,7 @@ miniprogramQrcode.getWxQrcodeInfo(`[@config: Object]`)
 
 #### `@example`
 
-#### `createWXAQRCode` 模式
+##### `createWXAQRCode` 模式
 > 获取`小程序二维码`，适用于需要的码数量较少的业务场景。通过该接口生成的小程序码，永久有效，有数量限制。
 > <a href="https://developers.weixin.qq.com/miniprogram/dev/api/open-api/qr-code/createWXAQRCode.html">官方说明</a>
 
