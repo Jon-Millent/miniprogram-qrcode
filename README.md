@@ -34,14 +34,13 @@ miniprogram-qrcode
 
 > 正常情况下，批量生成`100`张需要`62.556秒`，平均每张需要`0.62556秒`，1万张大概需要 `1.73小时`。  <a href="https://github.com/Jon-Millent/miniprogram-qrcode/blob/master/test/render.js">批量示例代码</a>
 
-## 安装
+## Install
 
 ```
 npm install miniprogram-qrcode --save
 ```
 
-
-## 使用
+## Use
 
 ```js
 let miniprogramQrcode = require('miniprogram-qrcode')
@@ -50,27 +49,48 @@ let qrocode = new miniprogramQrcode({
   appId: 'your appid',
   appSecret: 'your appSecret'
 });
-
 ```
 
-## Api List
+## API
+
 * miniprogramQrcode
-  * <a href="#miniqrcodegetwxqrcodeinfo">getWxQrcodeInfo</a>
+  * <a href="#getwxqrcodeinfo">getWxQrcodeInfo</a>
+
+
   
 ### getWxQrcodeInfo
+二维码渲染器
 
-二维码渲染函数，一共有三种生成模式。
 
-* createWXAQRCode
-* getWXACode
-* getWXACodeUnlimit
+#### `@params`  
+miniprogramQrcode.getWxQrcodeInfo(`[@config: Object]`)  
 
-#### `createWXAQRCode`
+* @config
+
+```js
+{
+  mode: 'createWXAQRCode', // mode一共三种模式 [createWXAQRCode | getWXACode | getWXACodeUnlimit] 详细见示例
+  config: {...}, //详细见示例
+}
+```
+
+#### `@return`
+返回状态码和图片buffer
+```js
+{
+  code: 200, // 200： 成功，500：失败
+  error: null, // 当出错的时候的错误信息
+  image: [BufferArray] // 二维码buffer数组
+}
+```
+
+#### `@example`
+
+#### `createWXAQRCode` 模式
 > 获取`小程序二维码`，适用于需要的码数量较少的业务场景。通过该接口生成的小程序码，永久有效，有数量限制。
 > <a href="https://developers.weixin.qq.com/miniprogram/dev/api/open-api/qr-code/createWXAQRCode.html">官方说明</a>
 
 ```js
-
 let info = await qrocode.getWxQrcodeInfo({
   mode: 'createWXAQRCode',
   config: {
@@ -78,10 +98,9 @@ let info = await qrocode.getWxQrcodeInfo({
     width: 400, // [Number] 二维码的宽度，默认 430px，最小 280px，最大 1280px
   },
 })
-
 ```
 
-#### `getWXACode`
+##### `getWXACode` 模式
 > 获取`小程序码`，适用于需要的码数量较少的业务场景。通过该接口生成的小程序码，永久有效，有数量限制。
 > <a href="https://developers.weixin.qq.com/miniprogram/dev/api/open-api/qr-code/getWXACode.html">官方说明</a>
 
@@ -100,7 +119,7 @@ let info = await qrocode.getWxQrcodeInfo({
 
 ```
 
-#### `getWXACodeUnlimit`
+##### `getWXACodeUnlimit` 模式
 > 获取`小程序码`，适用于需要的码数量极多的业务场景。通过该接口生成的小程序码，永久有效，数量暂无限制。
 > <a href="https://developers.weixin.qq.com/miniprogram/dev/api/open-api/qr-code/getWXACodeUnlimit.html">官方说明</a>
 
@@ -120,14 +139,7 @@ let info = await qrocode.getWxQrcodeInfo({
 
 ```
 
-`返回值格式`
-```js
-{
-  code: 200, // 200： 成功，500：失败
-  error: null, // 当出错的时候的错误信息
-  image: [BufferArray] // 二维码buffer数组
-}
-```
+
 
 
 
