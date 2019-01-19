@@ -152,7 +152,7 @@ let info = await qrocode.getWxQrcodeInfo({
 
 ## 关于调试
 
-## 微信开发者工具
+### 微信开发者工具
 使用微信开发者工具可以进行模拟参数调试
 ![QQ截图20181117104623.png](https://i.loli.net/2018/11/17/5bef811c0a918.png)
 
