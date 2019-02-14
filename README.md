@@ -37,8 +37,13 @@ miniprogram-qrcode
 ## Install
 
 ```
+yarn add miniprogram-qrcode
+```
+or
+```
 npm install miniprogram-qrcode --save
 ```
+
 
 ## Use
 
