@@ -169,7 +169,7 @@ let info = await qrocode.getWxQrcodeInfo({
 let info = await qrocode.getWxQrcodeInfo({
   mode: 'createWXAQRCode',
   config: {
-    page: `pages/index/main?sgr=521314&i=loveyou`
+    page: `pages/index/main?xxx=521314&i=xxx`
   },
 })
 ```
@@ -186,7 +186,7 @@ let info = await qrocode.getWxQrcodeInfo({
   mode: 'getWXACodeUnlimit',
   config: {
     page: `pages/index/main`,
-    scene: 'i:loveyou-sgr:521314'
+    scene: 'x:123-g:666'
   },
 })
 ```
