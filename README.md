@@ -177,8 +177,6 @@ let info = await qrocode.getWxQrcodeInfo({
 
 ![output-createWXAQRCode.png](https://i.loli.net/2018/11/17/5bef82c0a2625.png)  
 
-![Screenshot_2018-11-17-10-55-13-286_com.tencent.mm.png](https://i.loli.net/2018/11/17/5bef84594b377.png)
-
 #### getWXACodeUnlimit
 这个可以生成无限个，但是只能携带有局限性的参数`scene`，在这里推荐一种解析方式 `key:value-key:value`
 ```js
